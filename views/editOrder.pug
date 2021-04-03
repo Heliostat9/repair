@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    div(class="center-login")
+        form(action="", method="post")
+                input(type="hidden", name="id", value=orderId)
+                input(type="text" placeholder="Что сломалось?", name="item", value=orderItem)
+                textarea(rows="10"  name="description" placeholder="Опишите что именно сломалось? ") #{orderDescription}
+                select(name="status")
+                    if status == '60649dc57fcbcf84a283c804'
+                        option(value="60649dc57fcbcf84a283c804" selected) В обработке
+                    else 
+                        option(value="60649dc57fcbcf84a283c804") В обработке
+                    if status == '60649dfccbb75e2f3c914612'
+                        option(value="60649dfccbb75e2f3c914612" selected) Принято
+                    else 
+                        option(value="60649dfccbb75e2f3c914612") Принято
+                    if status == '60649e17cbb75e2f3c914614'
+                        option(value="60649e17cbb75e2f3c914614" selected) Отклонено
+                    else 
+                        option(value="60649e17cbb75e2f3c914614") Отклонено
+                    if status == '60649e07cbb75e2f3c914613'
+                        option(value="60649e07cbb75e2f3c914613" selected) Завершено
+                    else 
+                        option(value="60649e07cbb75e2f3c914613") Завершено
+                input(type="submit", value="Изменить")

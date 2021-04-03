@@ -1,0 +1,23 @@
+extends layout.pug 
+
+block content
+    div(class="center-login main-user")
+        h2 Добро пожаловать, #{user.surname} #{user.name}
+        
+        if status == 0
+            a(href="repair/addOrder") Оформить заявку на ремонт
+            br
+            br
+            a(href="repair/myOrder") Мои заявки 
+
+        if status == 1 
+            a(href="repair/users") Пользователи 
+            br
+            br
+            a(href="repair/orders") Заявки клиентов
+            br
+            br
+            a(href="") Настройки
+        br
+        br
+        a(href="/repair/logout") Выйти 

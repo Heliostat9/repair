@@ -1,0 +1,363 @@
+extends layout.pug 
+
+block content
+    <div class="outer-wrapper">
+    <div class="inner-wrapper">
+        <div class="slideshow">
+            <div class="slide">
+                <img src="img/it-2.jpg" alt="">
+                <div class="center">
+                    <div class="txt-slide">Быстрый и безопасный ремонтный сервис</div>
+                    <div class="txt-desc-slid">мы стремимся удовлетворить потребности наших клиентов и предоставить вам быстрое и своевременное обслуживание</div>
+                    <button class="btn-read-more">Читать больше</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/it-5.jpg" alt="">
+                <div class="center"> 
+                    <div class="txt-slide">Ремонт бытовой техники любой сложности</div>
+                    <div class="txt-desc-slid">мы стремимся удовлетворить потребности наших клиентов и предоставить вам быстрое и своевременное обслуживание</div>
+                    <button class="btn-read-more">Читать больше</button>
+                </div>
+            </div>
+            <div class="dots">
+                <div class="center-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="outer-wrapper">
+    <div class="inner-wrapper">
+        <section class="request">
+            <form action="" class="form-request" id="req">
+                <h2>Получить консультацию</h2>
+            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Телефон">
+            <input type="email" placeholder="E-mail">
+            <input type="submit">   
+            </form>
+        </section>
+    </div>
+    </div>
+    <div>  
+    <div class="outer-wrapper sticky">
+        <div class="inner-wrapper">
+            <section class="menu-services">
+                <nav>
+                    <a href="#comp-repair">Ремонт компьютеров</a>
+                    <a href="#cam-repair">Ремонт камер</a>
+                    <a href="#network">Безопасность сети</a>
+                    <a href="#checkup">Проверка устройств</a>
+                    <a href="#upgrade">Обновление ПК</a>
+                    <a href="#mobile-repair">Ремонт телефонов</a>
+                </nav>
+            </section>
+        </div>
+    </div> 
+    <div class="outer-wrapper">
+        <div class="inner-wrapper wt">
+            <section class="services"> 
+                <section id="comp-repair">
+                    <div class="lf-img">
+                        <i class="fas fa-desktop fa-2x"></i>
+                        <h3>Ремонт компьютеров</h3>
+                        <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                        <ul>
+                            <li>Дигностика</li>
+                            <li>Восстановление от водянных повреждений</li>
+                            <li>Замена батареи</li>
+                        </ul>
+                        <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-1.jpg" alt=""></div>
+                </section>
+                <section id="cam-repair">
+                    <div class="lf-img">
+                        <i class="fas fa-camera"></i>
+                        <h3>Ремонт камер</h3>
+                        <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                        <ul>
+                            <li>Дигностика</li>
+                            <li>Замена экрана</li>
+                            <li>Замена батареи</li>
+                        </ul>
+                        <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-4.jpg" alt=""></div>
+                </section>
+                <section id="network">
+                    <div class="lf-img">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Сетевая безопасность</h3>
+                    <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                    <ul>
+                        <li>Создание беспроводных сетей</li>
+                        <li>Установка защиты и обновление ПО</li>
+                        <li>Настройка роутеров</li>
+                    </ul>
+                    <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-3.jpg" alt=""></div>
+                </section>
+                <section id="checkup">
+                    <div class="lf-img">
+                    <i class="fas fa-tools"></i>
+                    <h3>Проверка устройств</h3>
+                    <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                    <ul>
+                        <li>Проверка производительности</li>
+                        <li>Проверка жизнеспособоности устройств</li>
+                        <li>Сборка и установка ПК</li>
+                    </ul>
+                    <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-2.jpg" alt=""></div>
+                </section>
+                <section id="upgrade">
+                    <div class="lf-img">
+                    <i class="fas fa-upload"></i>
+                    <h3>Обновление ПК</h3>
+                    <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                    <ul>
+                        <li>Обновление памяти</li>
+                        <li>Замена жёсткого диска</li>
+                        <li>Установка и настройка оборудования</li>
+                    </ul>
+                    <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-5.jpg" alt=""></div>
+                </section>
+                <section id="mobile-repair">
+                <div class="lf-img">
+                    <div class="i"><i class="fas fa-mobile"></i></div>
+                    <h3>Ремонт телефонов</h3>
+                    <p>Enim tortor at auctor urna nunc id cursus. Nibh mauris cursus mattis molestie. Lectus mauris ultrices eros in cursus.</p>
+                    <ul>
+                        <li>Замена экрана</li>
+                        <li>Дигностика</li>
+                        <li>Замена портов</li>
+                    </ul>
+                    <div class="req"><a href="#req" class="request-quote">Получить консультацию</a></div>
+                    </div>
+                    <div class="img-fill"><img class="req-img" src="img/it-6.jpg" alt=""></div>
+                </section>
+            </section>
+        </div>
+    </div> 
+    </div>
+    <div class="outer-wrapper">
+    <div class="inner-wrapper">
+        <section class="out-partner">
+            <h2>Наши партнёры</h2>
+            <div class="line"></div>
+            <p>Наши партнеры могут помочь с полным восстановлением данных, установки программного обеспечения или очистки ПК.</p>
+            <div class="partners">
+                <div class="partner left bottom"><img src="img/client-1.png" alt=""></div>
+                <div class="partner left bottom"><img src="img/client-2.png" alt=""></div>
+                <div class="partner left bottom"><img src="img/client-3.png" alt=""></div>
+                <div class="partner bottom"><img src="img/client-4.png" alt=""></div>
+                <div class="partner left"><img src="img/client-5.png" alt=""></div>
+                <div class="partner left"><img src="img/client-6.png" alt=""></div>
+                <div class="partner left"><img src="img/client-7.png" alt=""></div>
+                <div class="partner"><img src="img/client-8.png" alt=""></div>
+            </div>
+        </section>
+    </div>
+    </div> 
+    <div class="outer-wrapper l">
+    <div class="inner-wrapper wt">
+        <section class="how-we-work">
+            <h2>Как мы работаем</h2>
+            <div class="line"></div>
+            <p>Мы стремимся удовлетворить потребности наших клиентов и предоставить вам быстрое и своевременное обслуживание.</p>
+            <div class="works">
+                <div class="work">
+                    <div class="w-num">
+                        <span>1</span>
+                    </div>
+                    <div class="w-desc">
+                        <h3>Получить консультацию</h3>
+                        <p>Tempus imperdiet nulla malesuada pellentesque. Malesuada proin libero nunc consequat.</p>
+
+                        <div class="w-100"><a href="#req">Консультация</a></div>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="w-num">
+                        <span>2</span>
+                    </div>
+                    <div class="w-desc">
+                        <h3>Хранение</h3>
+                        <p>Tempus imperdiet nulla malesuada pellentesque. Malesuada proin libero nunc consequat.</p>
+                        <div class="w-100"><a href="#req">Читать больше</a></div>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="w-num">
+                        <span>3</span>
+                    </div>
+                    <div class="w-desc">
+                        <h3>Восстановление</h3>
+                        <p>Tempus imperdiet nulla malesuada pellentesque. Malesuada proin libero nunc consequat.</p>
+                        
+                        <div class="w-100"><a href="#req">Читать больше</a></div>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="w-num">
+                        <span>4</span>
+                    </div>
+                    <div class="w-desc">
+                        <h3>Получить консультацию</h3>
+                        <p>Tempus imperdiet nulla malesuada pellentesque. Malesuada proin libero nunc consequat.</p>
+                        
+                        <div class="w-100"><a href="#req">Читать больше</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div> 
+    <div class="outer-wrapper gt">
+    <div class="inner-wrapper gr">
+        <section class="freqently-asked">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="line"></div>
+            <p>Вот несколько ответов на вопросы, которые, по нашему мнению, могут у вас возникнуть. Если здесь нет ответа на ваши вопросы, свяжитесь с нами в любое время.</p>
+            <section class="questions">
+                <div class="question">
+                    <button class="accordion"><span>1.Сколько занимает обычный ремонт?</span><span class="r-plus"></span></button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <button class="accordion"><span>2.Бывают ли случаи что вы не можете починить утсройство?</span><span class="r-plus"></span></button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <button class="accordion"><span>3.Вы сможете восстановить информацию на моём устройстве?</span><span class="r-plus"></span></button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <button class="accordion"><span>4.Мне нужно делать заявку?</span><span class="r-plus"></span></button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <button class="accordion"><span>5.Вы можете спасти устройство, если оно попало в воду?</span><span class="r-plus"></span></button>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    </div>
+    <div class="outer-wrapper">
+    <div class="inner-wrapper wt">
+        <section class="reviews">
+            <h2>Отзывы клиентов</h2>
+            <div class="line"></div>
+            <p class="reviews-desc">Просмотрите некоторые из наших отзывов ниже, и пусть наши клиенты заверят вас, что мы лучшие в том, что делаем.</p>
+            <section class="gr-reviews"> 
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+                <section class="review">
+                    <h3>Tom Davis</h3>
+                    <p class="review-city">San Francisco, California</p>
+                    <p class="review-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                </section>
+            </section> 
+        </section>
+    </div>
+    </div>
+    <div class="outer-wrapper gt">
+    <div class="inner-wrapper gr">
+        <section class="get-in-touch">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4622.100451669747!2d52.45114711609054!3d54.60310780833513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4160ffc71a286e5f%3A0x5b8f30320cf2d0c9!2z0J3Qk9CU0KMgItCb0LXQvdC40L3QvtCz0L7RgNGB0LrQvdC10YTRgtGMIiDQn9CQ0J4gItCi0LDRgtC90LXRhNGC0Ywi!5e0!3m2!1sru!2sru!4v1615710107973!5m2!1sru!2sru"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h2>Обратная связь</h2>
+            <div class="line"></div>
+            <p class="desc-rev">Найдите минутку, чтобы заполнить форму, и мы сразу же свяжемся с вами.</p>
+            <form action="" class="form-request">
+                <input type="text" placeholder="Имя">
+                <input type="email" placeholder="E-mail">
+                <textarea name="" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </section>
+    </div>
+    </div>

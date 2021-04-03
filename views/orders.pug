@@ -1,0 +1,49 @@
+extends layout.pug 
+
+block content 
+    div(class="center-login")
+            form(action="", method="post") 
+                    select(name="status")      
+                                option(value="" selected) Все
+                                if status == '60649dc57fcbcf84a283c804'
+                                    option(value="60649dc57fcbcf84a283c804" selected) В обработке
+                                else 
+                                    option(value="60649dc57fcbcf84a283c804") В обработке
+                                if status == '60649dfccbb75e2f3c914612'
+                                    option(value="60649dfccbb75e2f3c914612" selected) Принято
+                                else 
+                                    option(value="60649dfccbb75e2f3c914612") Принято
+                                if status == '60649e17cbb75e2f3c914614'
+                                    option(value="60649e17cbb75e2f3c914614" selected) Отклонено
+                                else 
+                                    option(value="60649e17cbb75e2f3c914614") Отклонено
+                                if status == '60649e07cbb75e2f3c914613'
+                                    option(value="60649e07cbb75e2f3c914613" selected) Завершено
+                                else 
+                                    option(value="60649e07cbb75e2f3c914613") Завершено
+                                
+                    input(type="submit", value="Cортировать")
+            table(border=1) 
+                thead 
+                    tr 
+                        th Фамилия
+                        th Имя
+                        th Отчество
+                        th Город
+                        th Что сломалось
+                        th Что именно сломалось
+                        th Статус
+                        th Управление
+                tbody 
+                    each order in orders
+                        tr 
+                            td= order.user.surname 
+                            td= order.user.name
+                            td= order.user.lastname
+                            td= order.user.city.name
+                            td= order.item
+                            td= order.description
+                            td= order.status.name
+                            td 
+                                a(href="/repair/del/" + order._id) Удалить
+                                a(href="/repair/edit/"+ order._id) Редактировать  

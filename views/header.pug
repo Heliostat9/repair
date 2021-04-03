@@ -1,0 +1,25 @@
+header
+        <div class="inner-wrapper">
+            <div class="logo">
+                <a href="/" class="not-st"><p>РемонтТехники</p></a>
+            </div>
+            <nav>
+                <span class="burger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <ul class="list close">
+                    <a href="/"><li>Главная</li></a>
+                    <a href="/news"><li>Новости</li></a>
+                    
+                    <a href="/about"><li>О нас</li></a>
+                    
+                    if auth
+                        <a href="/repair"><li>Профиль</li></a>
+                    else 
+                        <a href="/login" class="btn-wel"><li>Войти</li></a>
+                        <a href="/register" class="btn-wel"><li>Зарегистрироваться</li></a>
+                    </ul>
+            </nav>
+        </div>

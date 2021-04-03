@@ -1,0 +1,35 @@
+extends layout.pug 
+
+block content
+    div(class="center-login users")
+        form(action="", method="post") 
+                select(name="status")  
+                            option(value="" selected) По умолочанию
+                            if status == 'asc'    
+                                option(value="asc" selected) По возрастанию А-Я
+                            else 
+                                option(value="asc") По возрастанию А-Я(Фамилия)
+                            if status == 'desc'   
+                                option(value="desc" selected) По возрастанию Я-А
+                            else 
+                                option(value="desc") По возрастанию Я-А(Фамилия) 
+                input(type="submit", value="Сортировать")
+        table(border="1")
+            thead
+                tr  
+                    th Фамилия
+                    th Имя 
+                    th Отчество
+                    th Город
+                    th Контроль
+            tbody 
+                each user in users
+                    tr 
+                        td= user.surname
+                        td= user.name 
+                        td= user.lastname 
+                        th= user.city.name 
+                        th 
+                            a(href="/repair/delUser/" + user._id) Удалить
+
+            
