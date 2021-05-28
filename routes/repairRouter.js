@@ -2,7 +2,9 @@ const express = require('express');
 const repairController = require('../controllers/repairController');
 const repairRouter = express.Router();
 
-
+repairRouter.get('/consults/del/:id', repairController.deleteConsult);
+repairRouter.get('/consults', repairController.consults);
+repairRouter.get('/print/:id', repairController.printOrder);
 repairRouter.post('/users', repairController.users);
 repairRouter.get('/delUser/:id', repairController.deleteUser);
 repairRouter.get('/users', repairController.users);

@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 const homeRouter = require('./routes/homeRouter');
 const repairRouter = require('./routes/repairRouter');
 
-const dbFilePath = 'mongodb://localhost:27017/repairdb';
+const dbFilePath = 'mongodb+srv://Heliostat:mongoColl@cluster0.vder1.mongodb.net/repairdb?retryWrites=true&w=majority';
 
 
 mongoose.connect(dbFilePath,{useNewUrlParser: true, useUnifiedTopology: true}, function(err) {

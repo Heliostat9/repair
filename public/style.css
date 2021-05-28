@@ -499,6 +499,24 @@ footer p {
 }
 
 
+.wsr.btn-wel{
+    padding: 5px;
+    margin: 8px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #3452f1;
+    border: 2px solid #3452f1;
+    transition: background-color 0.5s, color 0.5s ease;
+}
+
+
+.wsr.btn-wel:hover {
+    background-color: #3452f1;
+    color: white;
+    transition: background-color 0.5s, color 0.5s ease;
+}
+
+
 @media screen and (min-width: 1024px)  { 
     a.btn-wel li{
         padding: 5px;

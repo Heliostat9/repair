@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content 
+    div(class="center-login")
+        if register
+            h1 Регистрация выполнена успешно!
+        else 
+            h1 Консультация отправлена
+        br
+        a(href="/") На главную

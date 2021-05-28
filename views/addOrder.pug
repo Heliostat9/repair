@@ -3,6 +3,12 @@ extends layout.pug
 block content
     div(class="center-login")
         form(action="", method="post")
-            input(type="text" placeholder="Что сломалось?", name="item")
+            select(name="item")
+                option(selected disabled) Что сломалось?
+                option(value="Компьютер") Компьютер
+                option(value="Камера") Камера
+                option(value="Проблемы с сетью") Проблемы с сетью
+                option(value="Телефон") Телефон
+                option(value="Другая причина") Другая причина
             textarea(rows="10"  name="description" placeholder="Опишите что именно сломалось? ")
-            input(type="submit", value="Отправит заявку")
+            input(type="submit", value="Отправить заявку")

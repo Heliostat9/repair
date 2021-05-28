@@ -4,16 +4,16 @@ block content
      div(class="center-login")
             form(action="", method="post") 
                 h2 Регистрация
-                input(type="text" placeholder="Введите имя" name="name")
-                input(type="text" placeholder="Введите фамилию" name="surname")
-                input(type="text" placeholder="Введите Отчество" name="lastname") 
-                select(name="city")
+                input(type="text" required placeholder="Введите имя" name="name")
+                input(type="text" required  placeholder="Введите фамилию" name="surname")
+                input(type="text" required  placeholder="Введите Отчество" name="lastname") 
+                select(name="city" required)
                     option(value="" selected disabled) Выберите ваш город 
                     option(value="6068a743468c1419b0b02942") Лениногорск
                     option(value="6068a7259de767d0f07e2ebb") Альметьевск
                     option(value="6068a73a468c1419b0b02941") Казань
-                input(type="text" placeholder="Придумайте логин" name="login")
+                input(type="text" required  placeholder="Придумайте логин" name="login")
                
-                input(type="password" placeholder="Придумайте пароль" name="pass")
+                input(type="password" required  placeholder="Придумайте пароль" name="pass")
                 
                 input(type="submit", value="Зарегистрироваться")  

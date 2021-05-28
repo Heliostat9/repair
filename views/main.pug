@@ -2,7 +2,10 @@ extends layout.pug
 
 block content
     div(class="center-login main-user")
-        h2 Добро пожаловать, #{user.surname} #{user.name}
+        if status == 1 
+            h2 Добро пожаловать, Администратор
+        else 
+            h2 Добро пожаловать, #{user.surname} #{user.name}
         
         if status == 0
             a(href="repair/addOrder") Оформить заявку на ремонт
@@ -17,7 +20,7 @@ block content
             a(href="repair/orders") Заявки клиентов
             br
             br
-            a(href="") Настройки
+            a(href="repair/consults") Консультации
         br
         br
         a(href="/repair/logout") Выйти 

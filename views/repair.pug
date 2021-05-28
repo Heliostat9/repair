@@ -9,7 +9,7 @@ block content
                 <div class="center">
                     <div class="txt-slide">Быстрый и безопасный ремонтный сервис</div>
                     <div class="txt-desc-slid">мы стремимся удовлетворить потребности наших клиентов и предоставить вам быстрое и своевременное обслуживание</div>
-                    <button class="btn-read-more">Читать больше</button>
+                    
                 </div>
             </div>
             <div class="slide">
@@ -17,10 +17,10 @@ block content
                 <div class="center"> 
                     <div class="txt-slide">Ремонт бытовой техники любой сложности</div>
                     <div class="txt-desc-slid">мы стремимся удовлетворить потребности наших клиентов и предоставить вам быстрое и своевременное обслуживание</div>
-                    <button class="btn-read-more">Читать больше</button>
+                    
                 </div>
             </div>
-            <div class="dots">
+            <div class="dots"  id="req">
                 <div class="center-dots">
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -30,13 +30,14 @@ block content
     </div>
     </div>
     <div class="outer-wrapper">
-    <div class="inner-wrapper">
+    <div class="inner-wrapper" >
         <section class="request">
-            <form action="" class="form-request" id="req">
+            
+            <form action="" method="POST" class="form-request">
                 <h2>Получить консультацию</h2>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Телефон">
-            <input type="email" placeholder="E-mail">
+            <input required type="text" name="name" placeholder="Имя">
+            <input required type="tel" pattern="+7([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="tel" id="tel" placeholder="Телефон">
+            <input required type="email" name="email" placeholder="E-mail">
             <input type="submit">   
             </form>
         </section>

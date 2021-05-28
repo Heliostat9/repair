@@ -2,7 +2,11 @@ const User = require('../models/Users');
 const Order = require('../models/Order');
 const Group = require('../models/Group');
 const City = require('../models/City');
+const Consult = require('../models/Consult');
 const mongoose = require('mongoose');
+const createReport = require('docx-templates');
+const fs = require('fs');
+const path = require('path');
 
 exports.main = function(req, res) {
     let name;
@@ -43,6 +47,35 @@ exports.addOrderCheck = function(req, res) {
 
     res.redirect('/repair');
 
+};
+
+exports.printOrder = async function(req, res) {
+    const template = fs.readFileSync('./public/template.docx');
+
+    const order = await Order.findById({_id: mongoose.Types.ObjectId(req.params.id)}).populate({path: 'user', populate: {path: 'city'}});
+
+    console.log(createReport);
+    let buffer = await createReport.createReport({
+            template,
+            data: {
+                id: order._id,
+                сlientsurname: order.user.surname,
+                сlientname: order.user.name,
+                сlientlastname: order.user.lastname,
+                ssurname: 'Гаязов',
+                city: order.user.city.name,
+                sname: 'Динар',
+                slastname: 'Маратович',
+                item: order.item,
+                description: order.description,
+                price: 0,
+                date: (new Date()).toString(),
+            },
+    });
+    
+
+    fs.writeFileSync(('report' + req.params.id + '.docx'), buffer);
+    res.sendFile(path.join(__dirname, '../', 'report' + req.params.id + '.docx'));
 };
 
 exports.addOrder = function(req, res) {
@@ -98,6 +131,21 @@ exports.editOrder = async function(req, res) {
     });
 
 };
+
+exports.consults = async (req, res) => {
+    const result = await Consult.find();
+
+    res.render('consult.pug', {
+        auth: req.session.idi,
+        consults: result
+    })
+}
+
+exports.deleteConsult = async (req, res) => {
+    await Consult.remove({_id: mongoose.Types.ObjectId(req.params.id)});
+
+    res.redirect('/repair/consults');
+}
 
 exports.editOrderSave = async function(req, res) {
     if (!req.body) return res.redirect('/repair');

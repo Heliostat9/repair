@@ -19,6 +19,7 @@ homeRouter.get('/register', homeController.register);
 homeRouter.post('/register', homeController.registerCheck);
 homeRouter.get('/login', homeController.login);
 homeRouter.post('/login', homeController.loginCheck);
+homeRouter.post('/', homeController.consult);
 homeRouter.get('/', homeController.index);
 
 module.exports = homeRouter;

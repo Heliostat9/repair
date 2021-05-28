@@ -38,4 +38,6 @@ block content
                         td= order.description
                         td= order.status.name
                         td
-                            a(href="/repair/delItem/"+ order._id) Удалить 
+                            a(href="/repair/delItem/"+ order._id class="wsr btn-wel") Удалить 
+                            if(order.status.name == "Завершено")
+                                    a(href="/repair/print/" + order._id class="wsr btn-wel") Печать

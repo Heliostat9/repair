@@ -1,0 +1,19 @@
+extends layout.pug 
+
+block content 
+    div(class="center-login")
+        table(border=1) 
+                thead 
+                    tr 
+                        th Имя
+                        th Телефон
+                        th Email
+                        th Управление
+                tbody 
+                    each consult in consults
+                        tr 
+                            td= consult.name
+                            td= consult.tel
+                            td= consult.email
+                            td
+                                a(href="/repair/consults/del/" + consult._id class="wsr btn-wel") Удалить

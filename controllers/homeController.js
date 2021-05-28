@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('../models/Users');
+const Consult = require('../models/Consult');
 
 exports.index = function(req, res) {
     res.render('repair.pug', {
@@ -12,6 +13,20 @@ exports.register = function(req, res) {
         auth: req.session.idi
     });
 };
+
+exports.consult = async (req, res) => {
+    const newConsult = new Consult({
+        name: req.body.name,
+        tel: req.body.tel,
+        email: req.body.email
+    });
+
+    newConsult.save();
+
+    res.render('success.pug', {
+        auth: req.session.idi,
+    });
+}
 
 exports.registerCheck = function(req, res) {
     if (!req.body) return res.redirect('/register');
@@ -35,7 +50,10 @@ exports.registerCheck = function(req, res) {
 
     user.save();
 
-    res.redirect('login');
+    res.render('success.pug', {
+        register: true,
+        auth: req.session.idi,
+    });
 };
 
 exports.login = function(req, res) {
